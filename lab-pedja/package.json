@@ -1,0 +1,25 @@
+{
+  "name": "05-linked-list",
+  "version": "1.0.0",
+  "description": "![cf](https://i.imgur.com/7v5ASc8.png) Lab 5: Linked List ======",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest -i --coverage || exit 0",
+    "lint": "eslint . || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjosifovic/05-linked-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjosifovic/05-linked-list/issues"
+  },
+  "homepage": "https://github.com/pjosifovic/05-linked-list#readme",
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "jest": "^21.2.1"
+  }
+}
