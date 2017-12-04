@@ -20,7 +20,7 @@ describe('linked-list.js',() => {
     expect(result.next.next.next).toEqual(null);
   });
 
-  test('throw error if ', () => {
+  test('throw error if node is not an instance of LinkedList', () => {
     let result = new LinkedList(5);
     let nodeNotInstance = {'value':100, 'next': null};
 
@@ -63,6 +63,13 @@ describe('linked-list.js',() => {
     expect(first.value).toEqual(10);
     expect(first.next.value).toEqual(30);
     expect(first.next.next).toEqual(null);
+  });
+
+  test('throw error if node is not an instance of LinkedList', () => {
+    let result = new LinkedList(5);
+    let nodeNotInstance = {'value':100, 'next': null};
+
+    expect(function () {result.remove(nodeNotInstance); } ).toThrow(TypeError);
   });
 
 });
