@@ -31,18 +31,16 @@ class LinkedList {
   remove(node){
     if(!(node instanceof LinkedList))
       throw new TypeError('<node> should be instance of LinkedList');
-    if(!this.next)
+    if(!this.next){
       return this;
+    }
     if(this.next === node)
       this.next = this.next.next;
-    else
+    else {
       this.next.remove(node);
-
+    }
     return this;
   }
-
 }
-
-
 
 module.exports = LinkedList;

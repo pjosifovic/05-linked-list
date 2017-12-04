@@ -72,4 +72,41 @@ describe('linked-list.js',() => {
     expect(function () {result.remove(nodeNotInstance); } ).toThrow(TypeError);
   });
 
+  test('remove an element if there\' is only one element in list', () => {
+    let first = new LinkedList(10);
+
+    first.remove(first);
+
+    expect(first.value).toEqual(10);
+    expect(first.next).toEqual(null);
+  });
+
+  test('remove an element if there\' is only one element in list', () => {
+    let first = new LinkedList(10);
+
+    first.remove(first);
+
+    expect(first.value).toEqual(10);
+    expect(first.next).toEqual(null);
+  });
+
+  test('remove this.next.next element', () => {
+    let first = new LinkedList(10);
+    let second = new LinkedList(20);
+    let third = new LinkedList(30);
+
+    first.append(second);
+    second.append(third);
+
+    expect(first.value).toEqual(10);
+    expect(first.next.value).toEqual(20);
+    expect(first.next.next.value).toEqual(30);
+    expect(first.next.next.next).toEqual(null);
+
+    first.remove(third);
+
+    expect(first.value).toEqual(10);
+    expect(first.next.value).toEqual(20);
+    expect(first.next.next).toEqual(null);
+  });
 });
